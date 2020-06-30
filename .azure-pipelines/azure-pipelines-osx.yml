@@ -8,8 +8,16 @@ jobs:
     vmImage: macOS-10.14
   strategy:
     matrix:
-      osx_:
-        CONFIG: osx_
+      osx_python3.6:
+        CONFIG: osx_python3.6
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: nsls2/nsls2forge:latest
+      osx_python3.7:
+        CONFIG: osx_python3.7
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: nsls2/nsls2forge:latest
+      osx_python3.8:
+        CONFIG: osx_python3.8
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: nsls2/nsls2forge:latest
     maxParallel: 8
