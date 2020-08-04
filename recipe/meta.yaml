@@ -7,11 +7,11 @@ package:
   version: {{ version }}
 
 source:
-  url: https://github.com/{{ name }}/{{ name }}/releases/download/{{ version }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: {{ sha256 }}
 
 build:
-  number: 0
+  number: 1
   script: "{{ PYTHON }} -m pip install . --no-deps -vv"  # [not win]
   entry_points:
     - xonsh = xonsh.main:main
@@ -35,6 +35,7 @@ test:
     - pytest
   imports:
     - xonsh
+    - xonsh.__amalgam__
   commands:
     - USER=test xonsh -h  # [unix]
     - xonsh -h  # [win]
