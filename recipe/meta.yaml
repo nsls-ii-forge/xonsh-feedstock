@@ -1,6 +1,6 @@
 {% set name = "xonsh" %}
-{% set version = "0.9.18" %}
-{% set sha256 = "723a548fe2cc0d0db8fe90c121b2c0d8a541f34956ea446e8a7ef2c83fcf99c0" %}
+{% set version = "0.9.19" %}
+{% set sha256 = "977d75dd5ddb7bb2d329e4a00f01b1bd8705a76ee2ecc02f91e470634213fb4c" %}
 
 package:
   name: {{ name|lower }}
@@ -11,8 +11,8 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1
-  script: "{{ PYTHON }} -m pip install . --no-deps -vv"  # [not win]
+  number: 0
+  script: {{ PYTHON }} -m pip install . --no-deps -vv  # [not win]
   entry_points:
     - xonsh = xonsh.main:main
     - xonsh-cat = xonsh.xoreutils.cat:cat_main
