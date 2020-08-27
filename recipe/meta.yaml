@@ -35,7 +35,6 @@ test:
     - pytest
   imports:
     - xonsh
-    - xonsh.__amalgam__
   commands:
     - USER=test xonsh -h  # [unix]
     - xonsh -h  # [win]
