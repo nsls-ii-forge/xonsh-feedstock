@@ -1,6 +1,6 @@
 {% set name = "xonsh" %}
-{% set version = "0.9.23" %}
-{% set sha256 = "65bc01c6b5d1b33563141a62f4c83b172c50923e32a797b52955af38cfe8b498" %}
+{% set version = "0.9.27" %}
+{% set sha256 = "82aa7c50eb161c74e0b12c4f9c772d228a1e90b21afb948c0dc9dfb2b63f5fd5" %}
 
 package:
   name: {{ name|lower }}
